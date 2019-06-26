@@ -4,12 +4,14 @@ import { createStore } from 'redux';
 import App from '../components/App';
 import reducers from '../reducers';
 
-const IndexJsx = (props) => {
-  return (
-    <Provider store={createStore(reducers)}>
-      <App />
-    </Provider>
-  );
-};
+/**
+ * Wrap the app into a "provider", to give it access to the Redux store.
+ */
+
+const IndexJsx = props => (
+  <Provider store={createStore(reducers)}>
+    <App />
+  </Provider>
+);
 
 export default IndexJsx;

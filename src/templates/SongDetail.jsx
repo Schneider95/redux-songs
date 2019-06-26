@@ -4,7 +4,6 @@ const SongListJsx = (props) => {
   const { selectedSong } = props;
   const song = selectedSong;
 
-
   return (
     <div>
       {!song
